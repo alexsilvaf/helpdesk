@@ -43,6 +43,14 @@ public class TecnicoService {
         return repository.save(newObj);
     }
 
+    public Tecnico update(Integer id, TecnicoDTO objDTO) {
+        objDTO.setId(id);
+        Tecnico oldObj = findById(id);
+        validaPorCpfEEmail(objDTO);
+        oldObj = new Tecnico(objDTO);
+        return  repository.save(oldObj);
+    }
+
     /**
      * Verifica se há a existencia de uma pessoa com e-mail ou cpf inseridos
      * @param objDTO: Objeto do tipo técnico
