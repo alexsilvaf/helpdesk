@@ -2,7 +2,6 @@ package com.alex.helpdesk.resources;
 
 import com.alex.helpdesk.domain.Tecnico;
 import com.alex.helpdesk.domain.dtos.TecnicoDTO;
-import com.alex.helpdesk.repositories.TecnicoRepository;
 import com.alex.helpdesk.services.TecnicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
