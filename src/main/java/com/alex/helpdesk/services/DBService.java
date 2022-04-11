@@ -1,5 +1,11 @@
 package com.alex.helpdesk.services;
 
+import java.util.Arrays;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Service;
+
 import com.alex.helpdesk.domain.Chamado;
 import com.alex.helpdesk.domain.Cliente;
 import com.alex.helpdesk.domain.Tecnico;
@@ -7,14 +13,7 @@ import com.alex.helpdesk.domain.enums.Perfil;
 import com.alex.helpdesk.domain.enums.Prioridade;
 import com.alex.helpdesk.domain.enums.Status;
 import com.alex.helpdesk.repositories.ChamadoRepository;
-import com.alex.helpdesk.repositories.ClienteRepository;
 import com.alex.helpdesk.repositories.PessoaRepository;
-import com.alex.helpdesk.repositories.TecnicoRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.stereotype.Service;
-
-import java.util.Arrays;
 
 @Service
 public class DBService {
